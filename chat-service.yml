@@ -3,9 +3,9 @@ spring:
     name: chat-service
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://postgres-chat:5432/chat_service_db}
-    username: ${SPRING_DATASOURCE_USERNAME:chat_service}
-    password: ${SPRING_DATASOURCE_PASSWORD:password}
+    url: jdbc:postgresql://postgres-chat:5432/chat_service_db
+    username: chat_service
+    password: password
   jpa:
     hibernate:
       ddl-auto: validate
@@ -19,7 +19,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_SERVICE_URL:http://eureka:8761/eureka/}
+      defaultZone: http://eureka:8761/eureka/
   instance:
-    hostname: ${EUREKA_INSTANCE_HOSTNAME:chat-service}
+    hostname: chat-service
     prefer-ip-address: false
