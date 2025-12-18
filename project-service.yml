@@ -3,9 +3,9 @@ spring:
     name: project-service
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://postgres-project:5432/project_service_db}
-    username: ${SPRING_DATASOURCE_USERNAME:project_service}
-    password: ${SPRING_DATASOURCE_PASSWORD:password}
+    url: jdbc:postgresql://postgres-project:5432/project_service_db
+    username: project_service
+    password: password
   jpa:
     hibernate:
       ddl-auto: validate
@@ -19,8 +19,8 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_SERVICE_URL:http://eureka:8761/eureka/}
+      defaultZone: http://eureka:8761/eureka/
   instance:
-    hostname: ${EUREKA_INSTANCE_HOSTNAME:project-service}
+    hostname: project-service
     prefer-ip-address: false
 
