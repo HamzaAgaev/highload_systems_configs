@@ -14,7 +14,7 @@ spring:
     change-log: classpath:db/changelog/db.changelog-master.yml
 
 server:
-  port: 8082
+  port: 0
 
 eureka:
   client:
@@ -22,7 +22,6 @@ eureka:
       defaultZone: http://eureka:8761/eureka/
   instance:
     hostname: project-service
-    prefer-ip-address: false
 
 springdoc:
   api-docs:
