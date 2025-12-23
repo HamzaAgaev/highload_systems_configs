@@ -5,20 +5,23 @@ spring:
     url: r2dbc:postgresql://postgres-user:5432/user_service_db
     username: user_service
     password: password
+
+  datasource:
+    url: jdbc:postgresql://postgres-user:5432/user_service_db
+    username: user_service
+    password: password
+    driver-class-name: org.postgresql.Driver
   liquibase:
     enabled: true
     change-log: classpath:db/changelog/db.changelog-master.yml
-
 server:
-  port: 0
-
+  port: 8081
 eureka:
   client:
     service-url:
       defaultZone: http://eureka:8761/eureka/
   instance:
     hostname: user-service
-
 springdoc:
   api-docs:
     path: /v3/api-docs
