@@ -23,3 +23,10 @@ eureka:
   instance:
     hostname: chat-service
     prefer-ip-address: false
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    use-root-path: false
+    path: /swagger-ui.html

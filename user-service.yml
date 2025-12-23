@@ -18,3 +18,14 @@ eureka:
       defaultZone: http://eureka:8761/eureka/
   instance:
     hostname: user-service
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    use-root-path: false
+    path: /swagger-ui.html
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  use-management-port: false
+  show-actuator: false
