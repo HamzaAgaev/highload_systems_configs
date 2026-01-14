@@ -13,6 +13,9 @@ spring:
   liquibase:
     enabled: true
     change-log: classpath:db/changelog/db.changelog-master.yml
+    url: jdbc:postgresql://postgres-user:5432/user_service_db
+    user: user_service
+    password: password
 
 server:
   port: 8081
