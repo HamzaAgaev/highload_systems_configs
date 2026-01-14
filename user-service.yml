@@ -33,3 +33,14 @@ springdoc:
   default-produces-media-type: application/json
   use-management-port: false
   show-actuator: false
+
+logging:
+  level:
+    org.springframework.r2dbc: DEBUG
+    io.r2dbc.postgresql: DEBUG
+    org.springframework.data.r2dbc: DEBUG
+    org.springframework.data.r2dbc.core: DEBUG
+    org.springframework.boot.autoconfigure.jdbc: DEBUG
+    org.springframework.boot.autoconfigure.liquibase: DEBUG
+    liquibase: DEBUG
+    org.liquibase: DEBUG
