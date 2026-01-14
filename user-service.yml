@@ -34,6 +34,14 @@ springdoc:
   use-management-port: false
   show-actuator: false
 
+jwt:
+  secrets:
+    access: ${JWT_SECRETS_ACCESS}
+    refresh: ${JWT_SECRETS_REFRESH}
+  expirations:
+    access: ${JWT_EXPIRATIONS_ACCESS:50000}
+    refresh: ${JWT_EXPIRATIONS_REFRESH:1296000000}
+
 logging:
   level:
     org.springframework.r2dbc: DEBUG
