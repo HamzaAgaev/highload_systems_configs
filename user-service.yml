@@ -42,7 +42,7 @@ jwt:
     access: ${JWT_SECRETS_ACCESS}
     refresh: ${JWT_SECRETS_REFRESH}
   expirations:
-    access: ${JWT_EXPIRATIONS_ACCESS:50000}
+    access: ${JWT_EXPIRATIONS_ACCESS:900000}
     refresh: ${JWT_EXPIRATIONS_REFRESH:1296000000}
 
 logging:
